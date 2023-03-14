@@ -14,7 +14,13 @@ class Artist {
 
   // STATIC FX ADDITION:
   static function new( ... $params) {
+    // $params: A preset in PHP that bundles class properties into an array to be be destructured later.
+
     var_dump($params);
+    /*
+    For example,
+    */
+
     return new static( ... $params);
   }
 
