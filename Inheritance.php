@@ -29,15 +29,13 @@ class HydroFlask extends Nalgene
 class Collection
 {
   function __construct(public $collectibles)
-  {
-  }
+  {}
 
-  // **Array Map Goes Here**
   function sumPrices()
   {
     $total = array_map(fn($collectible) => $collectible->price, $this->collectibles);
     return array_sum($total);
-  }
+  }  
 }
 
 class Book
@@ -47,8 +45,7 @@ class Book
     public $author,
     public $price
   )
-  {
-  }
+  {}
 
 // function getTitle() =>
 // $this->title;
@@ -66,4 +63,4 @@ var_dump($collection);
 // var_dump($thicNhat)
 print($collection->sumPrices())
 
-  ?>
+?>

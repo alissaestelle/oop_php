@@ -3,8 +3,8 @@
 // NOTE: This is a variant of Static.php— in this version, a static fx has been added (L:16), and another class has been created ().
 
 
-class Artist {
-
+class Artist 
+{
   function __construct(
     public $name,
     // i.e. public *string* $name
