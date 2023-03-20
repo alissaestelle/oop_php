@@ -1,5 +1,7 @@
 <?php
 
+// ** ABSTRACT CLASS **
+
 abstract class App
 {
   function getName()
