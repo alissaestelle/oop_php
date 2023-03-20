@@ -2,7 +2,7 @@
 
 // HANDSHAKE APPROACH: i.e. INFORMAL INTERFACE
 
-// The "handshake" method is the unofficial version of an interface. 
+// The "handshake" method is the unofficial version of an interface.
 // If an interface is automatic, then a handshake is manual. Conceptually, handshakes still implement interfaces, only without any formal keywords.
 
 class SubscriptionCT

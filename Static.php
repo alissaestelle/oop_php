@@ -1,6 +1,6 @@
 <?php
 
-// NOTE: This is a variant of Constructor.php— in this version, a static fx has been added (L:16), and another class has been created ().
+// NOTE: This is a copy of Constructor.php. The same file is used, only a static fx has been added (L:16).
 
 class Artist
 {
