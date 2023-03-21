@@ -6,7 +6,7 @@ interface Newsletter
 {
   // ↳ *Interface Keyword*
   public function subscribe();
-  // In a case where parameters were listed, they would also be listed wherever this function was used.
+  // If parameters were listed here, they would also need to be listed wherever this function was used.
 }
 
 class SubscriptionCT
