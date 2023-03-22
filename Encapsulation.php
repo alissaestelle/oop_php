@@ -1,5 +1,7 @@
 <?php
 
+// ** Encapsulation **
+
 class Person
 {
   function __construct(protected $name, protected $age)
@@ -8,7 +10,7 @@ class Person
 
   function setAge($age)
   {
-    // setAge() limits the user age group to those 18 & older
+    // setAge() limits the user age group to those 18 & older.
     if ($age < 18) {
       // throw new Exception('Access Denied');
       echo nl2br("Access Denied \n");

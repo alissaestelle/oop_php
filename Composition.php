@@ -1,12 +1,14 @@
 <?php
 
+// ** Object Composition **
+
 interface Gateway
 {
   public function findCustomer();
   public function findSubscription();
 }
 
-// Controller: 
+// Controller:
 class Subscription
 {
   function __construct(protected Gateway $gateway)
@@ -52,6 +54,7 @@ class Braintree implements Gateway
   function __construct(public $name)
   {
   }
+
   function findCustomer()
   {
     print 'Braintree Customer Found!';

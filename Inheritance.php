@@ -1,7 +1,8 @@
 <?php
 
-// EXAMPLE NO. 1
+// ** Inheritance **
 
+// Example No. 1:
 class Nalgene
 {
   function fill()
@@ -11,10 +12,9 @@ class Nalgene
   }
 }
 
-// "Is A" Relationship?
 class HydroFlask extends Nalgene
 {
-  // HydroFlask has the same traits as Nalgene, and then some:
+  // HydroFlask can also be filled with water, so it extends Nalgene.
   function chill()
   {
     print 'Keeping Water Cold!';
@@ -22,8 +22,7 @@ class HydroFlask extends Nalgene
   }
 }
 
-// EXAMPLE NO. 2
-
+// Example No. 2:
 class Collection
 {
   function __construct(public $collectibles)

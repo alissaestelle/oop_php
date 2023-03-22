@@ -1,12 +1,13 @@
 <?php
 
-// NOTE: This is a copy of Handshake.php. The same file is used, but with an interface instead.
+// ** Interfaces **
+// Note: This is a copy of Handshake.php. The same example is used, but with an interface instead.
 
 interface Newsletter
 {
   // ↳ *Interface Keyword*
   public function subscribe();
-  // If parameters were listed here, they would also need to be listed wherever this function was used.
+  // If parameters were listed here, they would also need to be listed anywhere else this function was used.
 }
 
 class SubscriptionCT
@@ -40,5 +41,4 @@ class FictitiousNews implements Newsletter
 $controller = new SubscriptionCT();
 $controller->register(new FakeNews());
 // $controller->register(new FictitiousNews());
-
 ?>

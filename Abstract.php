@@ -1,13 +1,13 @@
 <?php
 
-// ** ABSTRACT CLASS **
+// ** Abstract Classes **
 
 abstract class App
 {
   function getName()
   {
     $className = (new ReflectionClass($this))->getShortName();
-    // getShortName() returns a class name as a string
+    // ↳ getShortName() returns a class name as a string.
 
     $appName = trim(preg_replace('/[A-Z]/', ' $0', $className));
     return $appName;
@@ -22,7 +22,6 @@ abstract class App
 
   abstract function findAcct($user);
 }
-
 
 class Study extends App
 {

@@ -1,15 +1,18 @@
 <?php
 
-// HANDSHAKE APPROACH: i.e. INFORMAL INTERFACE
+// ** Handshakes **
+// (i.e. Informal Interfaces)
 
-// The "handshake" method is the unofficial version of an interface.
-// If an interface is automatic, then a handshake is manual. Conceptually, handshakes still implement interfaces, only without any formal keywords.
+/*
+The "handshake" method is the unofficial approach to interfaces. 
+If an interface is automatic, then a handshake is manual. 
+Handshakes still implement interfaces, only without any formal keywords.
+*/
 
 class SubscriptionCT
 {
   function register($thirdParty)
   {
-    // $example = 'alissa@kimmel.com';
     $thirdParty->subscribe();
   }
 }
