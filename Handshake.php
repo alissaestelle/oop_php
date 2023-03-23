@@ -5,7 +5,7 @@
 
 /*
 The "handshake" method is the unofficial approach to interfaces. 
-If an interface is automatic, then a handshake is manual. 
+↳ If an interface is automatic, then a handshake is manual. 
 Handshakes still implement interfaces, only without any formal keywords.
 */
 

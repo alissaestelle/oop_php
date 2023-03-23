@@ -1,7 +1,7 @@
 <?php
 
 // ** Interfaces **
-// Note: This is a copy of Handshake.php. The same example is used, but with an interface instead.
+// Note: This is a copy of Handshake.php. The same example is used here, but with an interface instead.
 
 interface Newsletter
 {

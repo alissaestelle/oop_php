@@ -14,7 +14,7 @@ class Age
   // ** Mutable Fx **
   function update()
   {
-    // ↳ Returns the same instance it was given because the argument passed *is* mutable.
+    // ↳ Returns the same instance it was given because the argument provided *is* mutable.
     $newAge = $this->age += 1;
     return $newAge;
   }
@@ -22,7 +22,7 @@ class Age
   // ** Immutable Fx **
   function new()
   {
-    // ↳ Returns a *new* instance since the argument passed is *not* mutable.
+    // ↳ Returns a *new* instance since the argument provided is *not* mutable.
     $newInst = new self($this->age + 1);
     return $newInst;
   }

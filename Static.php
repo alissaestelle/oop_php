@@ -1,7 +1,7 @@
 <?php
 
 // ** Static Functions **
-// Note: This is a copy of Constructor.php. The same example is used, only a static fx has been added (L:16).
+// Note: This is a copy of Constructor.php. The same example is used here, only a static fx has been added (L:16).
 
 class Artist
 {
@@ -17,7 +17,7 @@ class Artist
   static function new(...$params)
   {
     /*
-    $params is a preset in PHP that bundles class properties into an array to be destructured later. $params works like an alias (equivalent to class' properties) so that parameters don't need to be itemized for each use.
+    $params is a preset in PHP that bundles class properties into an array to be destructured later. $params works like an alias (equivalent to class properties) so that parameters don't need to be itemized for each use.
 
     Ex: var_dump($params)
     */
