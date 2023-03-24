@@ -25,22 +25,7 @@ try {
 // Example No. 2:
 class Video
 {
-  // Logic Here
-}
-
-class StreamCT
-{
-  function findUser(User $user)
-  {
-    try {
-      echo $user->download(new Video());
-    } catch (Exception $e) {
-      // ↳ Catches/prevents the Exception on L:60.
-      echo 'User Acct Required to Stream';
-      // echo $e → Releases/permits the Exception on L:60.
-    }
-    // Note: If the catch block were left empty, PHP would still catch the error, but the terminal wouldn't display any messages.
-  }
+  // Class Logic Here
 }
 
 class User
@@ -66,18 +51,34 @@ class User
   }
 }
 
-// $test = (new User)->download(new Video);
+class StreamCT
+{
+  function findUser(User $user)
+  {
+    try {
+      echo $user->download(new Video());
+    } catch (Exception $e) {
+      // ↳ Catches/prevents the Exception on L:60.
+      echo 'User Acct Required to Stream';
+      // echo $e → Releases/permits the Exception on L:60.
+    }
+    // Note: If the catch block were left empty, PHP would still catch the error, but the terminal wouldn't display any messages.
+  }
+}
 
 $alissa = new User();
 $controller = new StreamCT();
-echo $controller->findUser($alissa);
+// echo $controller->findUser($alissa);
 
 // ** Custom Classes **
 
-// class TeamMax extends Exception
-// {
-//   protected $message = 'Member Limit Exceeded!';
-// }
+/*
+CC Example No. 1:
+class TeamMax extends Exception
+{
+  protected $message = 'Member Limit Exceeded!';
+}
+*/
 
 class TeamAlert extends Exception
 {
@@ -90,36 +91,37 @@ class TeamAlert extends Exception
 
 class Team
 {
-  public $members = [];
+  protected $members = [];
 
-  function add(Member $member)
+  function add(Member ...$member)
   {
     // ** Condition: 3 Member Max **
-    $totalPlayers = count($this->members);
-    var_dump($totalPlayers);
+    $playerList = $this->members;
+    $totalPlayers = count($member);
 
-    if ($totalPlayers >= 3) {
-      throw TeamAlert::memberMax();
-    }
+    $totalPlayers > 3
+      ? throw TeamAlert::memberMax()
+      : ($playerList = $this->members[] = $member);
 
-    $this->members[] = $member;
+    return $playerList;
   }
 }
 
-class PickleBall
+class Sport
 {
-  function create()
+  function create(Team $team)
   {
-    $pickleBall = new Team();
-
     try {
-      $pickleBall->add(new Member('Jane Doe'));
-      $pickleBall->add(new Member('John Doe'));
-      $pickleBall->add(new Member('Jack Doe'));
-      $pickleBall->add(new Member('Jill Doe'));
-    } catch (TeamMax $e) {
+      $team->add(
+        new Member('Jane Doe'),
+        new Member('John Doe'),
+        new Member('Jack Doe')
+      );
+      // new Member('Jill Doe')
+    } catch (TeamAlert $e) {
       var_dump($e->getMessage());
     }
+    return $team;
   }
 }
 
@@ -130,6 +132,6 @@ class Member
   }
 }
 
-$tommyPickles = (new PickleBall())->create();
-
+$pickleBall = (new Sport())->create($pickleClan = new Team());
+var_dump($pickleClan);
 ?>
