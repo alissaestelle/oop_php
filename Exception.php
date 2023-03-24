@@ -70,7 +70,7 @@ $alissa = new User();
 $controller = new StreamCT();
 // echo $controller->findUser($alissa);
 
-// ** Custom Classes **
+// ** Exceptions: Custom Classes **
 
 /*
 CC Example No. 1:
