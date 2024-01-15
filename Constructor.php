@@ -6,7 +6,7 @@
 General Notes:
 - Constructor property promotion (CPP) is the new standard constructor method as of PHP 8.
 - Access modifiers for functions are implicitly public unless otherwise specified.
-- Access modifiers for constructor properties are *strict requirements* (the public modifier must be explicitly declared).
+- Access modifiers for constructor properties are *strict requirements* (the public modifier must be declared when using CPP).
 - Getters and accessors are interchangeable functions.
 - If a constructor property is assigned a default value, its argument is optional.
 - If a constructor property is *not* assigned a default value, its argument is mandatory.
